@@ -72,7 +72,7 @@ const page: React.FC = () => {
         title: "Success",
         description: response.data.message,
       });
-      router.replace(`/verify/${username}`);
+      router.replace(`/verify-code/${username}`);
       setIsSubmittingForm(false);
     } catch (error) {
       console.error("Error during sign-up", error);
