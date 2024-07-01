@@ -28,7 +28,7 @@ const parseStringmessage = (messageString: string): string[] => {
 };
 const initialMessageString =
   "What's your favorite movie?||Do you have any pets?||What's your dream job?";
-const page = () => {
+const MessageProfilePage = () => {
   const {
     complete,
     isLoading: isSuggestLoading,
@@ -165,4 +165,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default MessageProfilePage;

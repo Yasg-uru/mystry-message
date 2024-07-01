@@ -82,7 +82,7 @@ const Dashboard:React.FC = () => {
         setIsSwitchLoading(false);
       }
     },
-    [setIsLoading, setMessages]
+    [setIsLoading, setMessages,toast]
   );
   useEffect(() => {
     fetchmessages();
