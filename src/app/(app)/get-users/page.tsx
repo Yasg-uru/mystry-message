@@ -28,7 +28,7 @@ const GetUsers: React.FC = () => {
         const response = await axios.get(
           `/api/get-alluser?pagenumber=${pageNumber}`
         );
-        console.log("this is a pagenumber", pageNumber);
+        // console.log("this is a pagenumber", pageNumber);
         setUsers(response.data.namesArray as string[]);
         setHasNextPage(response.data.hasNextpage);
         setTotalPages(response.data.Totalpages);
