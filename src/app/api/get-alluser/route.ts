@@ -5,7 +5,7 @@ export async function GET(request: Request) {
 
   try {
     const { searchParams } = new URL(request.url);
-    console.log("searchparams is",searchParams.get("pagenumber"))
+    console.log("searchparams is", searchParams.get("pagenumber"));
     const params = searchParams.get("pagenumber");
     const pagenumber = params ? parseInt(params) : 1;
 
