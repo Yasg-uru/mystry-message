@@ -25,7 +25,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from '@/components/ui/button';
 import { Loader2 } from "lucide-react";
 
-const page: React.FC = () => {
+const SignUpPage: React.FC = () => {
   //declaring the states that can handle the control flow of the component input form
   const [username, setUsername] = useState("");
   const [usernameMessage, setUsernameMessage] = useState<string>("");
@@ -181,4 +181,4 @@ const page: React.FC = () => {
   );
 };
 
-export default page;
+export default SignUpPage;

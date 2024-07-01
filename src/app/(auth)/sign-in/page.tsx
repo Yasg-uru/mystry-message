@@ -17,7 +17,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-const page: React.FC = () => {
+const SignInpage: React.FC = () => {
   const router = useRouter();
   const form = useForm<z.infer<typeof signinSchema>>({
     resolver: zodResolver(signinSchema),
@@ -109,4 +109,4 @@ const page: React.FC = () => {
   );
 };
 
-export default page;
+export default SignInpage;
