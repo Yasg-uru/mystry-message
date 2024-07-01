@@ -21,8 +21,7 @@ const GetUsers: React.FC = () => {
   const [TotalPages, setTotalPages] = useState<number>(0);
   const [pageNumber, setPageNumber] = useState<number>(1);
   const { toast } = useToast();
-  const [Loading, setisLoading] = useState(true);
-
+  
   useEffect(() => {
     const fetchUsers = async () => {
       try {
@@ -46,7 +45,7 @@ const GetUsers: React.FC = () => {
           variant: "destructive",
         });
       } finally {
-        setisLoading(false);
+        
       }
     };
     fetchUsers();
