@@ -14,7 +14,7 @@ const GetUsers: React.FC = () => {
     const fetchUsers = async () => {
       try {
         const response = await axios.get(
-          `/api/get-alluser?pagenumber=${pageNumber}`
+          `/api/get-users?pagenumber=${pageNumber}`
         );
         setUsers(response.data?.result);
         setHasNextPage(response.data?.hasNextpage);

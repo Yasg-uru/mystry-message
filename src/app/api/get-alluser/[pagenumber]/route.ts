@@ -1,7 +1,7 @@
 import connectdb from "@/lib/connectDb";
 import userModel from "@/models/User";
 
-export async function GET(
+export async function POST(
   request: Request,
   { params }: { params: { pagenumber: number } }
 ) {
