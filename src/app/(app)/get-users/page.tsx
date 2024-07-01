@@ -74,8 +74,8 @@ const GetUsers: React.FC = () => {
     <div className="min-h-screen bg-white flex flex-col p-2 ">
       <h1 className="text-center text-3xl font-bold "> Verfified Users List</h1>
       <div className="flex flex-col gap-2 ">
-        {users.map((user) => (
-          <Button className="bg-slate-600 flex justify-between p-10">
+        {users.map((user,index) => (
+          <Button key={index} className="bg-slate-600 flex justify-between p-10">
             {user}
             <Button
               onClick={() => {
