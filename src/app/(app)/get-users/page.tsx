@@ -26,8 +26,6 @@ const GetUsers: React.FC = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-     
-
         const response = await axios.get(
           `/api/get-users?pagenumber=${pageNumber}`
         );
@@ -75,24 +73,20 @@ const GetUsers: React.FC = () => {
   console.log("this is a type of users", typeof users);
   return (
     <div className="min-h-screen bg-white flex flex-col p-2 ">
-      <h1 className="text-center text-3xl font-bold ">Users List</h1>
+      <h1 className="text-center text-3xl font-bold "> Verfified Users List</h1>
       <div className="flex flex-col gap-2 ">
-       {
-
-         users.map((user) => (
-           <Button className="bg-slate-600 flex justify-between p-10">
-              {user}
-              <Button
-                onClick={() => {
-                  router.replace(`/u/${user}`);
-                }}
-                >
-                Send Message
-              </Button>
+        {users.map((user) => (
+          <Button className="bg-slate-600 flex justify-between p-10">
+            {user}
+            <Button
+              onClick={() => {
+                router.replace(`/u/${user}`);
+              }}
+            >
+              Send Message
             </Button>
-          ))
-        }
-       
+          </Button>
+        ))}
       </div>
       {
         <Pagination>
