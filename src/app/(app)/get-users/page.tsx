@@ -27,7 +27,7 @@ const GetUsers: React.FC = () => {
     const fetchUsers = async () => {
       try {
         const response = await axios.get(
-          `/api/get-users?pagenumber=${pageNumber}`
+          `/api/get-alluser?pagenumber=${pageNumber}`
         );
         console.log("this is a pagenumber", pageNumber);
         setUsers(response.data.namesArray as string[]);
