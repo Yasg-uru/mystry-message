@@ -31,7 +31,7 @@ const SignUpPage: React.FC = () => {
   const [usernameMessage, setUsernameMessage] = useState<string>("");
   const [isCheckingUsername, setIsCheckingUsername] = useState<boolean>(false);
   const [isSubmittingForm, setIsSubmittingForm] = useState<boolean>(false);
-  const debounced = useDebounceCallback(setUsername, 300);
+  const debounced = useDebounceCallback(setUsername, 100);
   const router = useRouter();
   const { toast } = useToast();
   const form = useForm({
