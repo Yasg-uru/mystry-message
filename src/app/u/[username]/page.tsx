@@ -28,7 +28,7 @@ const parseStringmessage = (messageString: string): string[] => {
 };
 const initialMessageString =
   "What's your favorite movie?||Do you have any pets?||What's your dream job?";
-const MessageProfilePage = () => {
+const MessageProfilePage:React.FC = () => {
   const {
     complete,
     isLoading: isSuggestLoading,

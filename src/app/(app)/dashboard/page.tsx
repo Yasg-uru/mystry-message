@@ -55,7 +55,7 @@ const Dashboard:React.FC = () => {
     } finally {
       setIsLoading(false);
     }
-  }, [setValue, toast]);
+  }, [setValue]);
   const fetchmessages = useCallback(
     async (refresh: boolean = false) => {
       setIsLoading(true);
@@ -82,7 +82,7 @@ const Dashboard:React.FC = () => {
         setIsSwitchLoading(false);
       }
     },
-    [setIsLoading, setMessages,toast]
+    [setIsLoading, setMessages]
   );
   useEffect(() => {
     fetchmessages();
