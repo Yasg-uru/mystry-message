@@ -22,6 +22,7 @@ import { ApiResponse } from "@/types/ApiResponse";
 import axios, { AxiosError } from "axios";
 import { useToast } from "@/components/ui/use-toast";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { useRouter } from "next/navigation";
 const specialCharacter = "||";
 const parseStringmessage = (messageString: string): string[] => {
   return messageString.split("||");
@@ -29,6 +30,7 @@ const parseStringmessage = (messageString: string): string[] => {
 const initialMessageString =
   "What's your favorite movie?||Do you have any pets?||What's your dream job?";
 const MessageProfilePage:React.FC = () => {
+  const router=useRouter()
   const {
     complete,
     isLoading: isSuggestLoading,
@@ -63,8 +65,9 @@ const MessageProfilePage:React.FC = () => {
       toast({
         title: "message sent successfully",
         description: response.data?.message,
-        variant: "destructive",
+        
       });
+      router.push("/dashboard");
       form.reset({ ...form.getValues(), content: "" });
     } catch (error) {
       const axiosError = error as AxiosError<ApiResponse>;
