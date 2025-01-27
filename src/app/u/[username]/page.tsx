@@ -136,7 +136,7 @@ const MessageProfilePage:React.FC = () => {
           <Button
             onClick={fetchSuggestMessages}
             className="my-4"
-            disabled={isSuggestLoading}
+            disabled={true}
           >
             Suggest Messages
           </Button>
